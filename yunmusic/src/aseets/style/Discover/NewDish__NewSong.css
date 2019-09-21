@@ -1,0 +1,50 @@
+.NewDish__NewSong{
+    text-align: center;
+    color:#fff
+}
+.NewDish__NewSong-square{
+    border: 1px solid #fff;
+    border-radius: 15px;
+    padding:5px 10px;
+    position: relative;
+    top: 3px
+}
+.NewDish__NewSong-top{
+    padding-bottom: 20px
+}
+.NewDish-bottom{
+    font-size: 12px
+}
+.NewDish-font{
+    display: block;
+    line-height: 20px;
+    overflow : hidden;
+}
+.NewDish-Row{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+.NewSong-bottom{
+    font-size: 12px
+}
+.NewSong-Row{
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+}
+.NewSong-font{
+    display: block;
+    line-height: 20px;
+    overflow : hidden;
+}
+.active{
+    color:#fff;
+    font-size: 16px
+}
+.NewDish__NewSong-title{
+    color:#ccc;
+    font-size: 14px
+}

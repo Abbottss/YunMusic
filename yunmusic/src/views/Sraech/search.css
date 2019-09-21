@@ -1,0 +1,243 @@
+.head{
+    width: 100%;
+    height: 1.8rem;
+    background-color:#343730 ;
+    padding-left: .32rem;
+    line-height: 1.8rem;
+    position: relative;
+}
+input{
+    height: 1.2rem;
+    width: 7.2rem;
+    margin-left: .32rem;
+    background-color:#343730;
+    border-bottom: 0.01rem solid #afb2ab;
+    border-top: 0rem solid #343730;
+    border-left: 0rem solid #343730;
+    border-right: 0rem solid #343730;
+    color: #95968e;
+
+}
+
+.head div:nth-child(4) .iconfont{
+    display: block;
+    margin-left: .64rem;
+}
+.head div .iconfont{
+    display: block;
+    font-size: .6rem;
+   
+}
+.box{
+    width: 100%;
+    height: 1.8rem;
+    background-color:#343730 ;
+    line-height: 2rem;
+    text-align: start      
+}
+.box .iconfont{
+    display:inline-block;
+    font-size: .6rem;
+    color: #a1a2a4;
+    padding-left: 0.32rem;
+}
+
+.box span {
+    display: inline-block;
+    font-size: .6rem;
+    color: #a1a2a4;
+    margin-left: 0.32rem;
+}
+.list{
+    position: absolute;
+    left:.32rem ;
+    top: 1.3rem;
+    width: 9rem;
+    height: 10rem;
+    background-color: #202018;
+}
+.list .strip{
+    height: 1rem;
+    font-size: .5rem;
+    line-height: 1rem;
+    color: #95968e;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.list .strip .iconfont{
+    display:inline-block;
+    font-size: .5rem;
+    padding: 0 .15rem 0 .32rem;
+}
+.list .top{
+    padding: 0 .15rem 0 .8rem;
+    font-size: .5rem;
+    height: 1rem;
+    color: #537d8b;
+    line-height: 1rem;
+    display: block;
+}
+/*                     热搜                            */
+.boxes{
+    height: 14.5rem;
+    overflow: scroll;
+}
+.ox{
+    display: inline-block;
+}
+.listSongs div .order{
+    display: inline-block;
+    width: .8rem;
+    font-size: .4rem;
+    text-align: center;
+
+}
+.listSongs{
+    margin-left: .2rem;
+}
+.listSongs div{
+    height: 1rem;
+    margin-bottom: .2rem;
+}
+.icon{
+    display: inline-block;
+    height: .4rem;
+    
+}
+.song{
+    display: inline-block;
+    font-size: .4rem;
+    height: .4rem;
+    line-height: .4rem;
+    margin-right: .3rem;
+}
+.score{
+    display: inline-block;
+    font-size: .3rem;
+    height: .4rem;
+    color: #8b9096;
+    line-height: .4rem;
+    margin-right: .5rem;
+}
+p{
+    height: .3rem;
+    line-height: .3rem;
+    font-size: .2rem;
+}
+.hot{
+    display: block;
+    height: .8rem;
+    font-size: .35rem;
+    line-height: .8rem;
+    margin-left: .2rem;
+}
+
+
+
+/*                                歌手                         */
+.boxs{
+    background-color: #343730;
+}
+.boxs .box{
+    background-color: #32342f;
+}
+.btn{
+    text-align: center;
+    width: 1rem;
+    height: .5rem;
+    display: inline-block;
+    margin: .2rem .3rem;
+    color: #e2e4d7;
+    font-size: .3rem;
+}
+.btn:visited{
+    display: inline-block;
+    color: #95968e;
+}
+.list2 .btn:nth-child(3){
+    display: inline-block;
+    width: 1.6rem;
+}
+.title{
+    color:#d4d6cb;
+    display: block;
+    font-size: .3rem;
+    height: .5rem;
+    line-height: .5rem;
+    padding-left: .3rem;
+    background-color: #5b5e63;
+}
+
+
+
+/*                       热门歌手                       */
+.hot-song{
+    overflow-y: scroll;
+}
+.listSong{
+    height: 10rem;
+}
+.hot-song::-webkit-scrollbar {
+    display: none;
+}
+.listSong div{
+    height: 2rem;
+    line-height: 2rem;
+    position: relative;
+    
+}
+.people{
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+.img{
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    vertical-align: middle;
+    line-height: 1rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.singer{
+    display: inline-block;
+    font-size: .4rem;
+    margin-left: .4rem;
+}
+.enter{
+    display: inline-block;
+    width: .4rem;
+    height: .4rem;
+    margin-left: .2rem;
+    background-color: red;
+    border-radius: 50%;
+    line-height: .4rem;
+    
+}
+ .enter .iconfont{
+    display: inline-block;
+    font-size: .3rem;
+    width: .4rem;
+    line-height: .4rem;
+    text-align: center;
+}
+.add{
+    display: inline-block;
+    width: 2rem;
+    height: .6rem;
+    border: .01rem solid #3c454c;
+    border-radius: .3rem;
+    text-align: center;line-height: .6rem;
+    font-size: .33rem;
+    position: absolute;
+    right: .33rem;
+    top:.7rem;
+}
+
+
+/*                                        */
+.show{
+    color: white;
+}

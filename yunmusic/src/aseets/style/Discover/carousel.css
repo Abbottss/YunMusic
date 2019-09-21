@@ -1,0 +1,18 @@
+.swiper-container{
+    border-radius: 12px
+}
+
+.ant-layout-content{
+    background: #6a7682
+}
+.carousel-box{
+    padding:5px 10px;
+    border-radius: 12px;
+    background: #6a7682
+}
+.swiper-wrapper{
+    border-radius: 12px
+}
+body{
+    background: #6a7682
+}

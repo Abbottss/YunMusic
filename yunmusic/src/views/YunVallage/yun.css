@@ -1,0 +1,6 @@
+.head{
+    font-size: 0.5rem;
+}
+.nav :active{
+    border-bottom: 0.02rem solid red;
+}
