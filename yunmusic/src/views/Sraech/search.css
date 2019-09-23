@@ -236,7 +236,41 @@ p{
     top:.7rem;
 }
 
+/*                     历史纪录                      */
+.his{
+    display: inline-block;
+    height: .6rem;
+    margin: .1rem;
+    margin-top: .3rem;
+    padding: 0 .3rem;
+    background-color: #575d53;
+    font-size: .4rem;
+    line-height: .6rem;
+    border-radius: .3rem 
+}
 
+.record{
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.record::-webkit-scrollbar {
+
+    display: none;
+}
+.boxes div:nth-child(1){
+    margin-top: .5rem;
+    padding: 0 .2rem;
+    height: 1.5rem;
+}
+.search-history,.iconfont{
+    display: inline-block;
+    font-size: .4rem;
+}
+.boxes div:nth-child(1) .iconfont{
+    display: inline-block;
+    font-size: .4rem;
+    margin-left: 6.8rem;
+}
 /*                                        */
 .show{
     color: white;

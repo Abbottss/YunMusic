@@ -1,0 +1,13 @@
+.ant-tabs-nav .ant-tabs-tab{
+    margin-right:0rem 
+}
+.ant-tabs-bar{
+    border: none;
+}
+.ant-tabs-ink-bar{
+    width: 0rem;
+    height: 0rem;
+}
+.ant-tabs-tabpane{
+    height: 12rem;
+}

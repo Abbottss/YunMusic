@@ -7,6 +7,7 @@ import {
     NavLink,
 	Switch
 } from "react-router-dom"
+import axios from "axios"
 import "./search.css"
 export default class Info extends React.Component{
     render(){
@@ -16,5 +17,16 @@ export default class Info extends React.Component{
                 <i className="iconfont">&#xe65b;</i>
             </div>
          )
+    }
+    async getInfo(){
+        const {data} =await axios.get(`http://49.232.53.60:8080/artist/list?cat=5001`);
+        this.setState({
+            Entername:data.artists
+            
+        })
+        console.log(data.artists)
+    }
+    componentWillMount(){
+        this.getInfo();
     }
 }

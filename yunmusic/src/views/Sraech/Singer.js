@@ -8,13 +8,32 @@ import {
 	Switch
 } from "react-router-dom"
 import "./search.css";
+import "./singer.css"
 import { Tabs } from 'antd';
 
 const { TabPane } = Tabs;
 export default class Search extends React.Component{
     constructor(){
         super();
+        this.types = [
+            { key: "cn_man", name: "华语男" },
+            { key: "cn_woman", name: "华语女" },
+            { key: "cn_team", name: "华语组合" },
+            { key: "k_man", name: "韩国男" },
+            { key: "k_woman", name: "韩国女" },
+            { key: "k_team", name: "韩国组合" },
+            { key: "j_man", name: "日本男" },
+            { key: "j_woman", name: "日本女" },
+            { key: "j_team", name: "日本组合" },
+            { key: "eu_man", name: "欧美男" },
+            { key: "eu_woman", name: "欧美女" },
+            { key: "eu_team", name: "欧美组合" },
+            { key: "other_man", name: "其它男" },
+            { key: "other_woman", name: "其它女" },
+            { key: "other_team", name: "其它组合" },
+          ];
         this.state={
+            typeKey: "cn_man",
             List:[],
             SongList:[],
             Entername:[]
@@ -28,19 +47,21 @@ export default class Search extends React.Component{
                         <NavLink to={"/search"} onClick={()=>(this.props.history.push("/search"))}><i className="iconfont">&#xe633;</i></NavLink>
                         <span>歌手分类</span>
                     </nav>
+                    
                     <Tabs>
+                        
                         <TabPane tab={<span>华语</span>}key="1">
                             <Tabs>
-                                <TabPane tab={<span>男</span>}key="1">nan</TabPane>
-                                <TabPane tab={<span>女</span>}key="2">nv</TabPane>
-                                <TabPane tab={<span>乐队/组合</span>}key="3">ha</TabPane>
+                                <TabPane tab={<span>男</span>}key="1">1</TabPane>
+                                <TabPane tab={<span>女</span>}key="2">2</TabPane>
+                                <TabPane tab={<span>乐队/组合</span>}key="3">3</TabPane>
                             </Tabs> 
                         </TabPane>
                         <TabPane tab={<span>欧美</span>}key="2">
                             <Tabs>
-                                <TabPane tab={<span>男</span>}key="1">nan</TabPane>
-                                <TabPane tab={<span>女</span>}key="2">nv</TabPane>
-                                <TabPane tab={<span>乐队/组合</span>}key="3">ha</TabPane>
+                                <TabPane tab={<span>男</span>}key="1">4</TabPane>
+                                <TabPane tab={<span>女</span>}key="2">5</TabPane>
+                                <TabPane tab={<span>乐队/组合</span>}key="3">6</TabPane>
                             </Tabs> 
                         </TabPane>
                         <TabPane tab={<span>日本</span>}key="3">
@@ -64,6 +85,7 @@ export default class Search extends React.Component{
                                 <TabPane tab={<span>乐队/组合</span>}key="3">ha</TabPane>
                             </Tabs> 
                         </TabPane>
+                        
                     </Tabs> 
                     <div className="hot-song">
                         <span className="title">热门歌手</span>

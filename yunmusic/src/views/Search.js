@@ -13,15 +13,18 @@ import {
 import "./Sraech/search.css"
 import Singer from "./Sraech/Singer"
 import Detail from "./Sraech/Detail"
+import { stringify } from "querystring";
 export default class Search extends React.Component{
     constructor(props){
         super(props);
+        localStorage.searLish = localStorage.searLish || "[]";
         this.state={
             Keyword:"",
             List:[],
             val:"",
             KeyList:[],
-            text:""
+            // text:[],
+            searList:JSON.parse(localStorage.searLish)
         }
     }
     async change(){
@@ -33,7 +36,6 @@ export default class Search extends React.Component{
             const {data} =await axios.get("http://49.232.53.60:8080/search?keywords="+this.refs.inp.value);
            this.setState({  
                     List:data.result.songs,
-                    text:data.result.songs.name
              })
         }
         
@@ -48,10 +50,10 @@ export default class Search extends React.Component{
                             <Col span={18}><input type="text" onChange={this.change.bind(this)} ref="inp"   placeholder={this.state.Keyword} /></Col>
                             
                             <ul className="list" style={{display:this.state.val===""?"none":"inline-block",overflow:"hidden"}}>
-                               <li className="top" onClick={()=>(this.props.history.push("/detail"))}>搜索  "{this.state.val}"</li>
+                               <li className="top" onClick={()=>{this.btn(this.state.List.name)}}>搜索  "{this.state.val}"</li>
                                 {(this.state.List).map((item,i)=>(
                                     (  
-                                        <li className="strip" onClick={this.btn.bind(this)}>
+                                        <li className="strip" onClick={()=>{this.btn(item.name)}}>
                                         <i className="iconfont">&#xe62c;</i>
                                         {item.name}</li>
                                     )
@@ -65,14 +67,20 @@ export default class Search extends React.Component{
                     </Row>
                     <div className="boxes">
                         <div>
-                            <span className="search-history">历史记录</span><i className="iconfont">&#xe63d;</i>
-                            <div className=" record"></div>
+                            <span className="search-history">历史记录</span><i className="iconfont" onClick={()=>{this.delete()}}>&#xe63d;</i>
+                            <div className=" record">
+                                {(this.state.searList).map((item,i)=>(
+                                    (
+                                        <span className="his">{item}</span>
+                                    )
+                                ))}
+                            </div>
                         </div>                  
                         <span className="hot">热搜榜</span>
                         <div className="listSongs">
                             {(this.state.KeyList).map((item,i)=>(
                                 (  
-                                    <div onClick={()=>(this.props.history.push("/detail"))}>
+                                    <div onClick={()=>{this.btn(item.searchWord)}}>
                                          <span className="order">{++i}</span>
                                          <div className="ox">
                                             <span className="song">{item.searchWord}</span>
@@ -93,9 +101,18 @@ export default class Search extends React.Component{
             </div>
         )
     }
-    btn(){
+    btn(v){
+        this.state.searList.unshift(v);
+        localStorage.searLish = JSON.stringify(this.state.searList)
+        this.setState({
+            searList:this.state.searLish
+        })
+
         this.props.history.push("/detail")
-        
+    }
+    delete(){
+        localStorage.removeItem("searLish")
+        this.props.history.push("/search")
     }
     async getDefault(){
         const {data} =await axios.get(`http://49.232.53.60:8080/search/default`);
@@ -110,6 +127,7 @@ export default class Search extends React.Component{
         })
         
     }
+    
     componentDidMount(){
         
         this.getDefault();
